@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>MwPSiS</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+	<style>
+	body { margin:0; padding:0; }
+	#map { position:absolute; top:0; bottom:0; width:100%;}
+</style>
+</head>
+<body>
+	<style>
+	.menu {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
+	}
+	</style>
+	<style>
+	.buttons {
+		position: absolute;
+		margin-top: 10px;
+		right: 10px;
+		z-index: 1000;
+	}
+	</style>
+	<style>
+	.start {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 16px 32px;
+		text-align: center;
+		
+	}
+	</style>
+
+
+	<div id='map'></div>
+	<div id='menu' class='menu'>
+		<div id='menu-in' class='w3-bar'>
+			<div class='w3-container w3-blue'>
+				<h2>Wybierz miasta</h2>
+			</div>
+			<form class='w3-container'>
+				<div class='w3-panel w3-pale-green w3-bottombar w3-border-green w3-border'>
+					<label>Miasto początkowe</label>
+					<p id='start_city'></p>
+				</div>
+				<div class='w3-panel w3-pale-blue w3-bottombar w3-border-blue w3-border'>
+					<label>Miasta pośrednie</label>
+					<p id='transit_cities'></p>
+				</div>
+				<div class='w3-panel w3-pale-red w3-bottombar w3-border-red w3-border'>
+					<label>Miasto końcowe</label>
+					<p id='stop_city'></p>
+				</div>
+			</form>
+			<div id='buttons' class='buttons'>
+				<button id='optimize' class='w3-button w3-teal'>Optymalizuj</button>
+				<button id='reset' class='w3-button w3-red'>Resetuj</button>
+			</div>
+		</div>
+	</div>
+
+	<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+	<script src='adding.js'></script>
+
+
+</body>
+</html>
+
+

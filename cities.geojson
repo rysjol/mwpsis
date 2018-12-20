@@ -1,0 +1,176 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20, 50], [20, 50], [20, 50], [20, 50]
+        ]
+      },
+      "properties": {
+        "prop0": "value0",
+        "prop1": 0.0
+      }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [18.653259, 54.348590]
+		  },
+		  "properties": {
+		  	"id": "0",
+		    "name": "Gdańsk",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Gdańsk, ID: 0"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [18.000434, 53.121994]
+		  },
+		  "properties": {
+		  	"id": "1",
+		    "name": "Bydgoszcz",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Bydgoszcz, ID: 1"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [15.574454, 54.1762177]
+		  },
+		  "properties": {
+		  	"id": "2",
+		    "name": "Kołobrzeg",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Kołobrzeg, ID: 2"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [19.0195338, 50.2590427]
+		  },
+		  "properties": {
+		  	"id": "3",
+		    "name": "Katowice",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Katowice, ID: 3"
+		  }
+    },   
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [19.9351372, 50.0615991]
+		  },
+		  "properties": {
+		  	"id": "4",
+		    "name": "Kraków",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Kraków, ID: 4"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [23.1585387, 53.1322542]
+		  },
+		  "properties": {
+		  	"id": "5",
+		    "name": "Białystok",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Białystok, ID: 5"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [19.452173, 51.7811939]
+		  },
+		  "properties": {
+		  	"id": "6",
+		    "name": "Łódź",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Łódź, ID: 6"
+		  }
+    }, 
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [16.9314281, 52.4082542]
+		  },
+		  "properties": {
+		  	"id": "7",
+		    "name": "Poznań",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Poznań, ID: 7"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [22.0033492, 50.037221]
+		  },
+		  "properties": {
+		  	"id": "8",
+		    "name": "Rzeszów",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Rzeszów, ID: 8"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [14.5576182, 53.4243505]
+		  },
+		  "properties": {
+		  	"id": "9",
+		    "name": "Szczecin",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Szczecin, ID: 9"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [21.0100477, 52.2497413]
+		  },
+		  "properties": {
+		  	"id": "10",
+		    "name": "Warszawa",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Warszawa, ID: 10"
+		  }
+    },
+    {
+		  "type": "Feature",
+		  "geometry": {
+		  	"type": "Point",
+		    "coordinates": [17.0301722, 51.1106992]
+		  },
+		  "properties": {
+		  	"id": "11",
+		    "name": "Wrocław",
+		    "marker-color": "#FFD300",
+		    "popupContent": "Miasto Wrocław, ID: 11"
+		  }
+    }
+  ]
+}
+
+
