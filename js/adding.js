@@ -7,7 +7,7 @@ var startId;
 var stopId;
 var transitIDs = [];
 var cities = L.mapbox.featureLayer()
-  .loadURL('cities.geojson')
+  .loadURL('js/cities.geojson')
   .on('ready', function() {
     map.fitBounds(cities.getBounds());
   })
@@ -54,10 +54,14 @@ $('#map').on('click', '.transit', id, function() {
     startId = 0;
     document.getElementById('start_city').innerHTML = '';
   };   
-  if(id == startId) {
+  if(id == stopId) {
     stopId = 0;
     document.getElementById('stop_city').innerHTML = '';
   }; 
+  if(transitIDs.indexOf(id) > -1) {
+    transitIDs.splice(transitIDs.indexOf(id), 1);
+    document.getElementById('transit_cities').innerHTML = transitIDs;
+  };
   transitIDs.push(id);
   document.getElementById('transit_cities').innerHTML = transitIDs;
 });
@@ -75,7 +79,11 @@ function reset() {
 };
 
 function optimize() {
-  alert('start: ' + startId + ', stop: ' + stopId +', transit: ' + transitIDs);
+  if(startId != 0 && stopId != 0 && transitIDs != '') {
+    alert('start: ' + startId + ', stop: ' + stopId +', transit: ' + transitIDs);
+  } else {
+    alert("Wybierz przynajmniej jeden punkt początkowy, końcowy i pośredni.")
+  }
 };
 
 

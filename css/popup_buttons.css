@@ -1,0 +1,65 @@
+.start {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+.start:hover {
+	background-color: white;
+	border: 2px solid #4CAF50;
+	color: #4CAF50;
+	padding: 14px 30px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+.stop {
+	background-color: #F44336;
+	border: none;
+	color: white;
+	padding: 16px 31px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+.stop:hover {
+	background-color: white;
+	border: 2px solid #F44336;
+	color: #F44336;
+	padding: 14px 29px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+.transit {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: 16px 24px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+
+.transit:hover {
+	background-color: white;
+	border: 2px solid #008CBA;
+	color: #008CBA;
+	padding: 14px 22px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
