@@ -3,11 +3,11 @@ var map = L.mapbox.map('map', 'mapbox.streets')
   .setView([52.03, 19.27], 6);
 
 var id;
-var startId;
-var stopId;
+var startId = -1;
+var stopId = -1;
 var transitIDs = [];
 var cities = L.mapbox.featureLayer()
-  .loadURL('js/cities.geojson')
+  .loadURL('/js/cities.geojson')
   .on('ready', function() {
     map.fitBounds(cities.getBounds());
   })
@@ -26,7 +26,7 @@ cities.on('click',function(e) {
 $('#map').on('click', '.start', id, function() {
   startId = id;
   if(startId == stopId) {
-    stopId = 0;
+    stopId = -1;
     document.getElementById('stop_city').innerHTML = '';
   }; 
   if(transitIDs.indexOf(startId) > -1) {
@@ -39,7 +39,7 @@ $('#map').on('click', '.start', id, function() {
 $('#map').on('click', '.stop', id, function() {
   stopId = id;
   if(stopId == startId) {
-    startId = 0;
+    startId = -1;
     document.getElementById('start_city').innerHTML = '';
   }; 
   if(transitIDs.indexOf(stopId) > -1) {
@@ -51,11 +51,11 @@ $('#map').on('click', '.stop', id, function() {
 
 $('#map').on('click', '.transit', id, function() {
   if(id == startId) {
-    startId = 0;
+    startId = -1;
     document.getElementById('start_city').innerHTML = '';
   };   
   if(id == stopId) {
-    stopId = 0;
+    stopId = -1;
     document.getElementById('stop_city').innerHTML = '';
   }; 
   if(transitIDs.indexOf(id) > -1) {
@@ -70,8 +70,8 @@ document.getElementById('reset').onclick = reset;
 document.getElementById('optimize').onclick = optimize;
 
 function reset() {
-  startId = 0;
-  stopId = 0;
+  startId = -1;
+  stopId = -1;
   transitIDs = [];
   document.getElementById('start_city').innerHTML = '';
   document.getElementById('stop_city').innerHTML = '';
@@ -79,10 +79,10 @@ function reset() {
 };
 
 function optimize() {
-  if(startId != 0 && stopId != 0 && transitIDs != '') {
-    alert('start: ' + startId + ', stop: ' + stopId +', transit: ' + transitIDs);
+  if(startId > -1 && stopId > -1 /*&& transitIDs != ''*/) {
+    alert('start: ' + startId + ', stop: ' + stopId/* +', transit: ' + transitIDs*/);
   } else {
-    alert("Wybierz przynajmniej jeden punkt początkowy, końcowy i pośredni.")
+    alert("Wybierz przynajmniej jeden punkt początkowy i końcowy.")
   }
 };
 
