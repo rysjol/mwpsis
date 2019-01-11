@@ -6,12 +6,12 @@ using namespace std;
 
 int main () {
   cout << "Content-type: text/html\n" << endl;
-  cout << "1" << endl;
   string line;
+  char* start_point;
+  char* stop_point;
   ifstream myfile ("index.html");
   if (myfile.is_open())
   {
-  	cout << "2" << endl;
     while ( getline (myfile,line) )
     {
       cout << line << '\n';
@@ -19,7 +19,17 @@ int main () {
     myfile.close();
   }
 
-  else cout << "Unable to open file"; 
+  else cout << "Unable to open file";
+
+  start_point = getenv("start");
+  stop_point = getenv("stop");
+
+  std::ofstream outfile ("test.txt");
+  outfile << "test" << std::endl;
+  outfile << "test2" << std::endl;
+  outfile << start_point << std::endl;
+  outfile << stop_point << std::endl;
+  outfile.close();
 
   return 0;
 }

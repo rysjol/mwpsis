@@ -80,7 +80,10 @@ function reset() {
 
 function optimize() {
   if(startId > -1 && stopId > -1 /*&& transitIDs != ''*/) {
-    alert('start: ' + startId + ', stop: ' + stopId/* +', transit: ' + transitIDs*/);
+    // alert('start: ' + startId + ', stop: ' + stopId/* +', transit: ' + transitIDs*/);
+    $.ajax({
+      url: "index.cgi?start=startId&stop=stopId",
+    });
   } else {
     alert("Wybierz przynajmniej jeden punkt początkowy i końcowy.")
   }
