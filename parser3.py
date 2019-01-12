@@ -4,6 +4,8 @@ import array as arr
 # import xml.etree.ElementTree as et
 from xml.etree import ElementTree
 from subprocess import call
+from urllib.parse import parse_qs
+import subprocess
 
 import collections
 
@@ -57,18 +59,22 @@ linki = [
 
 
 
-source = sys.argv[1]
-target = sys.argv[2]
+
+query_string = sys.argv[1]
+# target = sys.argv[2]
+data = parse_qs(query_string)
+source = tranzyt[int(data['start'][0])]
+target = tranzyt[int(data['stop'][0])]
 
 lista = []
 lista2 = []
 
-# for w in tree.findall(".//demand/[city='" + source + "']"):
-#    # print(w.attrib)
-#    lista.append(w.attrib)
-# for v in tree.findall(".//demand/[city='" + target + "']"):
-#    # print(v.attrib)
-#    lista2.append(v.attrib)
+for w in tree.findall(".//demand/[city='" + source + "']"):
+   # print(w.attrib)
+   lista.append(w.attrib)
+for v in tree.findall(".//demand/[city='" + target + "']"):
+   # print(v.attrib)
+   lista2.append(v.attrib)
 
 #Otrzymywanie demandu
 def intersection(lista, lista2):
@@ -107,5 +113,5 @@ f.close()
 
 
 os.system('cbc results.mod% -solve -solu out.csv')
-
+# subprocess.run(['cbc', 'results.mod%', '-solve', '-solu', 'out.csv'], stdout = open('ttt.txt', 'w'))
 

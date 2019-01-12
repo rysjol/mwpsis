@@ -21,15 +21,5 @@ int main () {
 
   else cout << "Unable to open file";
 
-  start_point = getenv("start");
-  stop_point = getenv("stop");
-
-  std::ofstream outfile ("test.txt");
-  outfile << "test" << std::endl;
-  outfile << "test2" << std::endl;
-  outfile << start_point << std::endl;
-  outfile << stop_point << std::endl;
-  outfile.close();
-
   return 0;
 }
