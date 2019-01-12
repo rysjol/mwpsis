@@ -14,5 +14,5 @@ Go to project dir and next:
 ```bash
 cd cgi-bin
 g++ cgi.cpp -o index.cgi
-g++ getidds.cpp -o getids.cgi
+g++ getids.cpp -o getids.cgi
 ```
