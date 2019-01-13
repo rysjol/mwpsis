@@ -83,6 +83,15 @@ function optimize() {
     // alert('start: ' + startId + ', stop: ' + stopId/* +', transit: ' + transitIDs*/);
     $.ajax({
       url: "getids.cgi?start=" + startId + "&stop=" + stopId,
+      success: function(response) {
+        // alert("Optymalna trasa i jej koszt: " + response);
+        var links = L.mapbox.featureLayer()
+        .loadURL('/js/links.geojson')
+        .on('ready', function() {
+          map.fitBounds(links.getBounds());
+         })
+        .addTo(map);
+      }
     });
   } else {
     alert("Wybierz przynajmniej jeden punkt początkowy i końcowy.")

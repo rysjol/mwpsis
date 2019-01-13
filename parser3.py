@@ -111,7 +111,7 @@ with open("dane.dat") as f2:
 
 f.close()
 
-
-os.system('cbc results.mod% -solve -solu out.csv')
-# subprocess.run(['cbc', 'results.mod%', '-solve', '-solu', 'out.csv'], stdout = open('ttt.txt', 'w'))
+print('asdasdadasd')
+#os.system('cbc results.mod% -solve -solu out.csv')
+subprocess.run(['cbc', 'results.mod%', '-solve', '-solu', 'out.csv'], stdout = open('ttt.txt', 'w'))
 
