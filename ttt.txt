@@ -7,22 +7,22 @@ command line - cbc results.mod% -solve -solu out.csv (default strategy 1)
 GMPL model file ./results.mod and data file ./
 Reading model section from ./results.mod...
 Reading data section from ./results.mod...
-113 lines were read
+112 lines were read
 Generating z...
 Generating c2...
 Generating c3...
 Model has been successfully generated
 Problem results has 3 rows, 61 columns and 129 elements
-Model was imported from ./results.mod in 0.00232 seconds
-Continuous objective value is 11010 - 0.00 seconds
+Model was imported from ./results.mod in 0.002319 seconds
+Continuous objective value is 3241 - 0.00 seconds
 Cgl0003I 0 fixed, 3 tightened bounds, 1 strengthened rows, 0 substitutions
 Cgl0003I 0 fixed, 0 tightened bounds, 1 strengthened rows, 0 substitutions
 Cgl0004I processed model has 1 rows, 3 columns (3 integer (0 of which binary)) and 3 elements
 Cutoff increment increased from 1e-05 to 0.9999
-Cbc0012I Integer solution of 11015 found by DiveCoefficient after 0 iterations and 0 nodes (0.00 seconds)
-Cbc0001I Search completed - best objective 11015, took 0 iterations and 0 nodes (0.00 seconds)
+Cbc0012I Integer solution of 3242 found by DiveCoefficient after 0 iterations and 0 nodes (0.00 seconds)
+Cbc0001I Search completed - best objective 3242, took 0 iterations and 0 nodes (0.00 seconds)
 Cbc0035I Maximum depth 0, 0 variables fixed on reduced cost
-Cuts at root node changed objective from 11015 to 11015
+Cuts at root node changed objective from 3242 to 3242
 Probing was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
 Gomory was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
 Knapsack was tried 0 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)
@@ -33,11 +33,11 @@ TwoMirCuts was tried 0 times and created 0 cuts of which 0 were active after add
 
 Result - Optimal solution found
 
-Objective value:                11015.00000000
+Objective value:                3242.00000000
 Enumerated nodes:               0
 Total iterations:               0
 Time (CPU seconds):             0.00
-Time (Wallclock seconds):       0.00
+Time (Wallclock seconds):       0.01
 
-Total time (CPU seconds):       0.01   (Wallclock seconds):       0.01
+Total time (CPU seconds):       0.01   (Wallclock seconds):       0.02
 
