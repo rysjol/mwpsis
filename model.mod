@@ -52,15 +52,15 @@ param K_count := 3;
 /*wartosci zapotrzebowan, po 10 dla pierwszego i drugiego*/
 #rozmiar pojazdu
 param : m :=
- 1    1
+ 1    2
  2    10
- 3    13
+ 3    32
 ; 
 #koszt wykorzystania danego pojazdu
 param : g :=
  1    2
- 2    10
- 3    15
+ 2    8
+ 3    25
 ;
 
 /*Macierz delta (mowi ktore linki wchodza w sklad jakich sciezek) id_link, zapotrzebowanie, id_path) */
