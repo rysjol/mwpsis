@@ -34,7 +34,7 @@ var x{d in D, p in P}, >= 0;
 var f{e in E,k in K}, integer, >= 0;    #modularnosc
 
 /* Objective function 'z' */
-minimize z: sum{e in E, d in D, p in P} (KSI[e]*LAM[e,d,p]*x[d,p]*4.95*10/100 + KSA[e]*LAM[e,d,p]*x[d,p])  + 
+minimize z: sum{e in E, d in D, p in P} (KSI[e]*LAM[e,d,p]*x[d,p] + KSA[e]*LAM[e,d,p]*x[d,p])  + 
 sum{e in E, k in K} g[k]*f[e,k];
 
 /* Constraints */
@@ -62,9 +62,6 @@ param : g :=
  2    10
  3    15
 ;
-#ilość ładunków
-param : h :=
- 1      24
-;
+
 /*Macierz delta (mowi ktore linki wchodza w sklad jakich sciezek) id_link, zapotrzebowanie, id_path) */
 param : LAM :=

@@ -34,7 +34,7 @@ var x{d in D, p in P}, >= 0;
 var f{e in E,k in K}, integer, >= 0;    #modularnosc
 
 /* Objective function 'z' */
-minimize z: sum{e in E, d in D, p in P} (KSI[e]*LAM[e,d,p]*x[d,p]*4.95*10/100 + KSA[e]*LAM[e,d,p]*x[d,p])  + 
+minimize z: sum{e in E, d in D, p in P} (KSI[e]*LAM[e,d,p]*x[d,p] + KSA[e]*LAM[e,d,p]*x[d,p])  + 
 sum{e in E, k in K} g[k]*f[e,k];
 
 /* Constraints */
@@ -62,13 +62,9 @@ param : g :=
  2    10
  3    15
 ;
-#ilość ładunków
-param : h :=
- 1      24
-;
+
 /*Macierz delta (mowi ktore linki wchodza w sklad jakich sciezek) id_link, zapotrzebowanie, id_path) */
-param : LAM :=
-18, 1, 1 12, 1, 1 13, 1, 1 14, 1, 1 113, 1, 2 15, 1, 2 14, 1, 2 118, 1, 3 11, 1, 3 15, 1, 3 14, 1, 3 118, 1, 4 12, 1, 4 16, 1, 4 116, 1, 4 118, 1, 5 12, 1, 5 13, 1, 5 15, 1, 5 111, 1, 5 17, 1, 5 19, 1, 5 117, 1, 5 112, 1, 6 110, 1, 6 111, 1, 6 15, 1, 6 14, 1, 6 113, 1, 7 11, 1, 7 12, 1, 7 13, 1, 7 14, 1, 7 1;param P_count := 7; /*liczba sciezek*//* Kilometry per link */
+param : LAM :=18, 1, 1 12, 1, 1 13, 1, 1 14, 1, 1 117, 1, 1 112, 1, 2 110, 1, 2 17, 1, 2 19, 1, 2 118, 1, 3 11, 1, 3 111, 1, 3 17, 1, 3 19, 1, 3 118, 1, 4 12, 1, 4 16, 1, 4 116, 1, 4 117, 1, 4 118, 1, 5 12, 1, 5 13, 1, 5 15, 1, 5 111, 1, 5 17, 1, 5 19, 1, 5 113, 1, 6 111, 1, 6 17, 1, 6 19, 1, 6 112, 1, 7 110, 1, 7 111, 1, 7 114, 1, 7 115, 1, 7 1;param P_count := 7; /*liczba sciezek*/param h := 1 5 ;/* Kilometry per link */
 param : KSI :=
 1 340
 2 234

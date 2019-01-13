@@ -6,12 +6,15 @@ var id;
 var startId = -1;
 var stopId = -1;
 var transitIDs = [];
+var loadSize = 0;
 var cities = L.mapbox.featureLayer()
   .loadURL('/js/cities.geojson')
   .on('ready', function() {
     map.fitBounds(cities.getBounds());
   })
   .addTo(map);
+
+var links = L.mapbox.featureLayer();
 
 cities.on('click',function(e) {
   id = e.layer.feature.properties.id;
@@ -72,27 +75,36 @@ document.getElementById('optimize').onclick = optimize;
 function reset() {
   startId = -1;
   stopId = -1;
+  loadSize = -1;
   transitIDs = [];
   document.getElementById('start_city').innerHTML = '';
   document.getElementById('stop_city').innerHTML = '';
   document.getElementById('transit_cities').innerHTML = '';
+  document.getElementById('load_size').value = '';
+  if (map.hasLayer(links)) {
+    map.removeLayer(links);
+  }
 };
 
 function optimize() {
   if(startId > -1 && stopId > -1 /*&& transitIDs != ''*/) {
+    loadSize = document.getElementById('load_size').value;
+    if (loadSize > 0 && loadSize != '') {
     // alert('start: ' + startId + ', stop: ' + stopId/* +', transit: ' + transitIDs*/);
-    $.ajax({
-      url: "getids.cgi?start=" + startId + "&stop=" + stopId,
-      success: function(response) {
-        // alert("Optymalna trasa i jej koszt: " + response);
-        var links = L.mapbox.featureLayer()
-        .loadURL('/js/links.geojson')
-        .on('ready', function() {
-          map.fitBounds(links.getBounds());
-         })
-        .addTo(map);
-      }
-    });
+      $.ajax({
+        url: "getids.cgi?start=" + startId + "&stop=" + stopId + "&load=" + loadSize,
+        success: function(response) {
+          alert(response);
+          links.loadURL('/js/links.geojson')
+          .on('ready', function() {
+            map.fitBounds(links.getBounds());
+          })
+          .addTo(map);
+        }
+      });
+    } else {
+      alert("Podaj wielkość ładunku.");  
+    }
   } else {
     alert("Wybierz przynajmniej jeden punkt początkowy i końcowy.")
   }

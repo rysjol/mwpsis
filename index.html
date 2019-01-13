@@ -3,7 +3,7 @@
 <head>
 	<meta charset=utf-8 />
 	<title>MwPSiS</title>
-	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<link rel="shortcut icon" type="image/png" href="favicon.ico">
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
@@ -12,9 +12,9 @@
 	<link rel="stylesheet" href='/css/menu.css'>
 	<link rel="stylesheet" href='/css/buttons.css'>
 	<style>
-		body { margin:0; padding:0; }
-		#map { position:absolute; top:0; bottom:0; width:100%;}
-	</style>
+	body { margin:0; padding:0; }
+	#map { position:absolute; top:0; bottom:0; width:100%;}
+</style>
 </head>
 <body>
 	<div id='map'></div>
@@ -37,18 +37,22 @@
 					<p id='stop_city'></p>
 				</div>
 			</form>
-			<div id='buttons' class='buttons'>
-				<button id='optimize' class='w3-button w3-teal'>Optymalizuj</button>
-				<button id='reset' class='w3-button w3-red'>Resetuj</button>
+			<form class="w3-container w3-card-4 w3-light-grey">
+				<p><label>Wielkość ładunku (ilość palet)</label>
+					<input class="w3-input w3-border" type="text" id="load_size"></p>
+			</form>
+					<div id='buttons' class='buttons'>
+						<button id='optimize' class='w3-button w3-teal'>Optymalizuj</button>
+						<button id='reset' class='w3-button w3-red'>Resetuj</button>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-	<script src='/js/adding.js'></script>
+			<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+			<script src='/js/adding.js'></script>
 
 
 
-</body>
-</html>
+		</body>
+		</html>
 
 
